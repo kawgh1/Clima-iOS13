@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol WeatherManagerDelegate {
     
@@ -15,12 +16,19 @@ protocol WeatherManagerDelegate {
 }
 
 struct WeatherManager {
+    // should not store API key in plaintext -- should be stored on device keychain
     let weatherUrl = ""
     
     var delegate: WeatherManagerDelegate?
     
-    func fetchWeather(cityName: String) {
+    func fetchWeatherByCityName(cityName: String) {
         let urlString = "\(weatherUrl)&q=\(cityName)"
+        print(urlString)
+        performRequest(urlString: urlString)
+    }
+    
+    func fetchWeatherByLatAndLon(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let urlString = "\(weatherUrl)&lat=\(latitude)&lon=\(longitude)"
         print(urlString)
         performRequest(urlString: urlString)
     }
@@ -58,14 +66,25 @@ struct WeatherManager {
             let weatherId = decodedData.weather[0].id
             let temp = decodedData.main.temp
             let name = decodedData.name
+            let desc = decodedData.weather[0].description
             
-            let weather = WeatherModel(weatherId: weatherId, cityName: name, temperature: temp)
+            let weather = WeatherModel(weatherId: weatherId, cityName: name, temperature: temp, descripion: desc)
+            print(weather)
             return weather
              
         } catch {
             self.delegate?.didFailWithError(error: error)
             return nil
         }
+    }
+    
+    func valueForAPIKey(named keyname:String) -> String {
+      // Credit to the original source for this technique at
+      // http://blog.lazerwalker.com/blog/2014/05/14/handling-private-api-keys-in-open-source-ios-apps
+        let filePath = Bundle.main.path(forResource: "ApiKeys", ofType: "plist")
+      let plist = NSDictionary(contentsOfFile:filePath!)
+      let value = plist?.object(forKey: keyname) as! String
+      return value
     }
     
    

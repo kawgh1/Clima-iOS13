@@ -13,6 +13,7 @@ struct WeatherModel {
     let weatherId: Int
     let cityName: String
     let temperature: Double
+    let descripion: String
     
     // Swift - "Computed Property"
     var tempString: String {
