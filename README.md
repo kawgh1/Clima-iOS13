@@ -3,6 +3,8 @@
 
 ## Our Goal
 
+![gif](https://raw.githubusercontent.com/kawgh1/Clima-iOS13/master/Weather%20App.gif)
+
 
 * How to create a dark-mode enabled app.
 * How to use vector images as image assets.
