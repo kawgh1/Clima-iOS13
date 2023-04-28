@@ -10,6 +10,7 @@
 		095CFDE929FA459C0097A5CC /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095CFDE829FA459C0097A5CC /* WeatherManager.swift */; };
 		095CFDEB29FA50950097A5CC /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095CFDEA29FA50950097A5CC /* WeatherData.swift */; };
 		095CFDED29FA56270097A5CC /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095CFDEC29FA56270097A5CC /* WeatherModel.swift */; };
+		095CFDF129FB9BDD0097A5CC /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 095CFDF029FB9BDD0097A5CC /* ApiKeys.plist */; };
 		ADAA27B1231BBFAF00365194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B0231BBFAF00365194 /* AppDelegate.swift */; };
 		ADAA27B3231BBFAF00365194 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */; };
 		ADAA27B5231BBFAF00365194 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B4231BBFAF00365194 /* WeatherViewController.swift */; };
@@ -25,6 +26,7 @@
 		095CFDE829FA459C0097A5CC /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		095CFDEA29FA50950097A5CC /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		095CFDEC29FA56270097A5CC /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		095CFDF029FB9BDD0097A5CC /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		ADAA27AD231BBFAF00365194 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADAA27B0231BBFAF00365194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				ADAA27BE231BBFB300365194 /* Info.plist */,
 				ADAA27C5231BC02B00365194 /* dark_background.pdf */,
 				ADAA27C4231BC02B00365194 /* light_background.pdf */,
+				095CFDF029FB9BDD0097A5CC /* ApiKeys.plist */,
 			);
 			path = Clima;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				095CFDF129FB9BDD0097A5CC /* ApiKeys.plist in Resources */,
 				ADAA27CE231BC87F00365194 /* README.md in Resources */,
 				ADAA27C7231BC02C00365194 /* dark_background.pdf in Resources */,
 				ADAA27BD231BBFB300365194 /* LaunchScreen.storyboard in Resources */,

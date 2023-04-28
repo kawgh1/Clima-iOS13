@@ -17,8 +17,13 @@ protocol WeatherManagerDelegate {
 
 struct WeatherManager {
     // should not store API key in plaintext -- should be stored on device keychain
-    let weatherUrl = ""
+    var API_KEY = "no api key"
+    var weatherUrl = "no url string"
     
+    init() {
+        API_KEY = valueForAPIKey(named: "API_KEY")
+        weatherUrl = "https://api.openweathermap.org/data/2.5/weather?appid=\(API_KEY)&units=imperial"
+    }
     var delegate: WeatherManagerDelegate?
     
     func fetchWeatherByCityName(cityName: String) {
